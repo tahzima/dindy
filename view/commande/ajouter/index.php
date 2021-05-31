@@ -24,13 +24,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/dindy/client">Client</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="http://localhost/dindy/produit">Produit</a>
-                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a  class="nav-link " href="">logout</a>
+                        <a  class="nav-link " href="http://localhost/dindy/logout">logout</a>
                     </li>
                 </ul>
             </div>
