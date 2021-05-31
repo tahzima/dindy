@@ -83,7 +83,7 @@
                 <div class="form-group col-md-6 text-center">
                     <label>Prix</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control datetimepicker-input" id="prix" name="prix" onclick="calculePrixTT()"/>
+                        <input type="text" class="form-control datetimepicker-input" id="prix" name="prix" onfocusout="calculePrixTT()"/>
                     </div>
                 </div>
                 <div class="form-group col-md-6 text-center">

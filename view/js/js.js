@@ -26,16 +26,14 @@ function addSalle() {
 }
 
 function calculePrixTT() {
-  var quantite = document.getElementById("quantite").value;
-  var prix = document.getElementById("prix").value;
-  var prixTT = document.getElementById("prixTT").value;
-  var res;
-  res = parseInt(quantite) * parseFloat(prix);
-  alert(res);
+  var quantite = document.getElementById("quantite");
+  var prix = document.getElementById("prix");
+  var res = parseInt(quantite.value) * parseFloat(prix.value);
+  document.getElementById("prixTT").value = res;
 }
 
 var i = 0;
-function addSalle() {
+function addClient() {
   var form = document.getElementById("form");
   var nom = document.getElementById("nom");
   var num = document.getElementById("num");

@@ -55,7 +55,7 @@
                               <div class="form-group col-md-8">
                                 <input type="number" name="num" id="num" class="form-control" placeholder="Num telephone">
                               </div>
-                              <button class="btn mb-2 add" onclick="addSalle()"><i class="fas fa-plus-square">+</i></button>
+                              <button class="btn mb-2 add" onclick="addClient()"><i class="fas fa-plus-square">+</i></button>
                               <button type="submit" class="btn  btn-primary mb-2 add" name="add">Ajouter</button>
                             </div>
                           </form>
