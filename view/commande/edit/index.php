@@ -33,26 +33,25 @@
             </div>
         </div>
     </nav>
-    <form action="http://localhost/dindy/commande/ajouter" method="POST">
+    <form action="http://localhost/dindy/commande/edit" method="POST">
         <div class="container mt-4">
         <div class="wrapper">
             <div class="container">
-                <h1 class="text-center">Ajouter Commande</h1>
+                <?php
+                foreach($resCommande as $rowC){ ?>
+                <h1 class="text-center">Modifier Commande</h1>
                 <div class="form-row">
                 <div class="form-group col-md-6 text-center">
-                    <label>client</label>
-                    <select id="inputState" class="form-control" name="client">
-                    <option selected>Choose...</option>
-                    <?php
-                        foreach($resultClient as $row){ ?>
-                        <option value="<?=$row['idClient']?>"><?=$row['nom']?></option>
-                        <?php } ?>
-                    </select>
+                    <label>Client</label>
+                    <input type="hidden" name="idCommande" value="<?=$rowC['id']?>">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control datetimepicker-input" id="client" name="client" value="<?=$rowC['client']?>"/>
+                    </div>
                 </div>
                 <div class="form-group col-md-6 text-center">
                     <label>produit</label>
                     <select id="inputState" class="form-control" name="produit">
-                    <option selected>Choose...</option>
+                    <option value="<?=$rowC['idProduit']?>" selected><?=$rowC['produit']?></option>
                     <?php
                         foreach($resultProduit as $row){ ?>
                         <option value="<?=$row['idProduit']?>"><?=$row['nom']?></option>
@@ -64,7 +63,7 @@
                     <div class="form-group col-md-12 text-center">
                         <label>Quantité</label>
                         <div class="col-sm-12">
-                            <input type="number" class="form-control datetimepicker-input" id="quantite" name="quantite"/>
+                            <input type="number" class="form-control datetimepicker-input" id="quantite" name="quantite" value="<?=$rowC['qte']?>"/>
                         </div>
                     </div>
                 </div>
@@ -72,7 +71,7 @@
                     <div class="form-group col-md-12 text-center">
                         <label>Date</label>
                         <div class="col-sm-12 ">
-                            <input type="date" class="form-control datetimepicker-input" name="date"/>
+                            <input type="date" class="form-control datetimepicker-input" name="date" value="<?=$rowC['date']?>"/>
                         </div>
                     </div>
                 </div>
@@ -80,13 +79,13 @@
                 <div class="form-group col-md-6 text-center">
                     <label>Prix</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control datetimepicker-input" id="prix" name="prix" onfocusout="calculePrixTT()"/>
+                        <input type="text" class="form-control datetimepicker-input" id="prix" name="prix" onfocusout="calculePrixTT()" value="<?=$rowC['prix']?>"/>
                     </div>
                 </div>
                 <div class="form-group col-md-6 text-center">
                     <label>Prix TT</label>
                     <div class="col-sm-12">
-                        <input type="text" class="form-control datetimepicker-input" id="prixTT" name="prixTT"/>
+                        <input type="text" class="form-control datetimepicker-input" id="prixTT" name="prixTT" value="<?=$rowC['prixTT']?>"/>
                     </div>
                 </div>
                 </div>
@@ -94,16 +93,17 @@
                 <div class="form-group col-md-12 text-center">
                     <label>Num Facture</label>
                     <div class="col-sm-12">
-                        <input type="number" min="1" class="form-control datetimepicker-input" name="nFacture"/>
+                        <input type="number" min="1" class="form-control datetimepicker-input" name="nFacture" value="<?=$rowC['numFacture']?>"/>
                     </div>
                 </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
         </div>
         <div class="form-row text-center">
             <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-primary btn-lg">Ajouter</button>
+                <button type="submit" class="btn btn-primary btn-lg">Modifier</button>
                 <div class="line"></div>
             </div>
         </div>

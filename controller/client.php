@@ -27,6 +27,12 @@ class Client
 		$client->delete($id);
 		header("location:http://localhost/dindy/client/");
 	}
+	public function readId($id)
+	{
+		$client=new ClientModel();
+		$client->delete($id);
+		header("location:http://localhost/dindy/client/");
+	}
 	public function edit()
 	{
 		

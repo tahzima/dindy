@@ -10,6 +10,14 @@ class clientModel{
         return $result;
     } 
 
+    //function read
+    // public function readId($id){
+    //     $sql="SELECT * FROM client ";
+    //     $query=Database::connect()->query($sql);
+    //     $result= $query->fetchAll(PDO::FETCH_ASSOC);
+    //     return $result;
+    // } 
+
     //function add
     public function add($nom,$num){
         $sql="INSERT INTO client(`nom`, `telephone`) VALUES ('$nom',$num)";
