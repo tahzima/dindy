@@ -90,14 +90,14 @@
                     </div>
                 </div>
                 </div>
-                <div class="form-row">
+                <!-- <div class="form-row">
                 <div class="form-group col-md-12 text-center">
                     <label>Num Facture</label>
                     <div class="col-sm-12">
                         <input type="number" min="1" class="form-control datetimepicker-input" name="nFacture"/>
                     </div>
                 </div>
-                </div>
+                </div> -->
             </div>
         </div>
         </div>

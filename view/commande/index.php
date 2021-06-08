@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="http://localhost/dindy/client">Client</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/dindy/imprimer">Print</a>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
@@ -31,6 +34,60 @@
     </nav>
 
     <div class="container mt-4">
+      <form action="http://localhost/dindy/imprimer/indexToPrint" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-3 text-center">
+                    <label>client</label>
+                    <select id="inputState" class="form-control" name="client">
+                    <option selected>Choose...</option>
+                    <?php
+                        foreach($resultClient as $row){ ?>
+                            <option value="<?=$row['idClient']?>"><?=$row['nom']?></option>
+                    <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group col-md-3 text-center">
+                    <label>Annee</label>
+                    <div class="col-sm-12 ">
+                        <?php
+                        $yearArray = range(2019, 2030);
+                        ?>
+                        <select name="year"  class="form-control">
+                            <?php
+                            foreach ($yearArray as $year) {
+                                $selected = ($year == 2019) ? 'selected' : '';
+                                echo '<option '.$selected.' value="'.$year.'">'.$year.'</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-3 text-center">
+                    <label>Mois</label>
+                    <div class="col-sm-12 ">
+                        <?php
+                        $monthArray = range(1,12);
+                        ?>
+                        <select name="month"  class="form-control">
+                            <?php
+                            foreach ($monthArray as $month) {
+                                $selected = ($month == 1) ? 'selected' : '';
+                                echo '<option '.$selected.' value="'.$month.'">'.$month.'</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-3 text-center">
+                    <label>Num Facture </label>
+                    <input type="number" class="form-control" name="numFacture" min="1">
+                </div>
+                <div class="form-group col-md-12 text-center">
+                    <br>
+                    <input type="submit" class="btn btn-primary" name="recherche" value="To Print"/>
+                </div>
+            </div>
+        </form>
       <a class="btn btn-primary float-end mb-4" id="open" href="http://localhost/dindy/commande/pageAjouter"><b>Ajouter Commande</b></a>
       <div class="">
         <table  id="example" class="table table-striped table-bordered" style="width:100%">
@@ -42,7 +99,6 @@
               <th class="text-center">Quantité</th>
               <th class="text-center">Prix</th>
               <th class="text-center">Prix Total</th>
-              <th class="text-center">Num Facture</th>
               <th class="text-center">Action</th>
             </tr>
           </thead>
@@ -67,9 +123,6 @@
                     <td>
                       <label id="labelPrixTT<?=$i?>"><?=$row['prixTT']?></label>
                     </td>
-                    <td>
-                      <label id="labelNF<?=$i?>"><?=$row['numFacture']?></label>
-                    </td>
                     <td class="text-center">
                         <a href="http://localhost/dindy/commande/toEdit/<?=$row['id']?>" class='btn btn-info btn-xs' id="editButton<?=$i?>"> Edit</a> 
                         <a href="http://localhost/dindy/commande/delete/<?=$row['id']?>" id="deleteButton<?=$i?>" class="btn btn-danger btn-xs"> Delete</a>
@@ -85,7 +138,6 @@
               <th class="text-center">Quantité</th>
               <th class="text-center">Prix</th>
               <th class="text-center">Prix Total</th>
-              <th class="text-center">Num Facture</th>
               <th class="text-center">Action</th>
             </tr>
           </tfoot>

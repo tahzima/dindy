@@ -26,3 +26,15 @@ body {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+.table td,
+.table th {
+  vertical-align: middle;
+}
+/* @page {
+  size: A4;
+  margin: 0;
+} */
+/* #print-btn {
+  display: none;
+  visibility: none;
+} */
