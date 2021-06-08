@@ -78,7 +78,7 @@
     <div class="container mt-4">
         <br>
         <div class="d-flex justify-content-start">
-            <img src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="" style="width: 120px;height: 120px;margin-top: 30px;">
+            <img src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="" style="width: 150px;height: 150px;margin-top: 30px;">
             <h1 class="text-center">Facture</h1>
         </div>
         <h5 class="text-center">N° : <?=$numFacture?></h5>
@@ -119,7 +119,7 @@
                 <tfoot class="text-center">
                     <tr>
                         <td colspan="3">
-                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre"></h5>
+                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change()"> <label id="lab" style="display: none;"></label></h5>
                         </td>
                         <td colspan="2">
                             <h4>TOTAL A PAYER : <?=$PTT[0]['Montant']?>DHs</h4>
@@ -150,5 +150,17 @@
       <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
       <script src="http://localhost/dindy/view/js/js.js"></script>
+      <script>
+        function change(){
+
+            var inp=document.getElementById("montantChiffre");
+            var lab=document.getElementById("lab");
+
+            document.getElementById("lab").innerText=inp.value;
+            document.getElementById("lab").style.display="inline-block";
+            document.getElementById("montantChiffre").style.display="none";
+
+        }
+      </script>
   </body>
 </html>
