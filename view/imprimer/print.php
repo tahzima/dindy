@@ -82,7 +82,7 @@
             <h1 class="text-center">Facture</h1>
         </div>
         <h5 class="text-center">N° : <?=$numFacture?></h5>
-        <h5 class="text-right">Safi,Le : <?=$date?></h5><br>
+        <h5 class="text-right">Safi,Le : ..............................</h5><br>
         <h5 class="text-left">Client : <?=$nomClient?></h5><br>
         <div class="form-row">
             <table>
@@ -90,9 +90,9 @@
                     <tr>
                         <th class="text-center">Date</th>
                         <th class="text-center">Désignation</th>
-                        <th class="text-center">Qté</th>
-                        <th class="text-center">P.U</th>
-                        <th class="text-center">Montant</th>
+                        <th class="text-center">Qté (DHs)</th>
+                        <th class="text-center">P.U (DHs)</th>
+                        <th class="text-center">Montant (DHs)</th>
                     </tr>
                 </thead>
                 <?php foreach($facture as $row){ ?>
@@ -117,12 +117,14 @@
                     </tbody>
                 <?php } ?>
                 <tfoot class="text-center">
-                    <tr>
+                    <tr >
                         <td colspan="3">
                             <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change()"> <label id="lab" style="display: none;"></label></h5>
                         </td>
-                        <td colspan="2">
-                            <h4>TOTAL A PAYER : <?=$PTT[0]['Montant']?>DHs</h4>
+                        <td colspan="2" >
+                            <p><h5>TOTAL H.T : <?=$PTT[0]['Montant']?> DHs</h5></p>
+                            <p style="border-bottom:1px black solid;"><h5>TOTAL T.V.A : 0 </h5></p>
+                            <p style="border-bottom:1px black solid;"><h5>Net A PAYER : <?=$PTT[0]['Montant']?> DHs</h5></p>
                         </td>
                     </tr>
                 </tfoot>
