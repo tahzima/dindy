@@ -59,7 +59,7 @@ class Commande
 			if(!empty($_POST['client'])&&!empty($_POST['produit'])&&!empty($_POST['quantite'])&&!empty($_POST['date'])&&!empty($_POST['prix'])&&!empty($_POST['prixTT'])){
 				$idClient=$_POST['client'];
 				$idProduit=$_POST['produit'];
-				$quantite=$_POST['quantite'];
+				$quantite=(float)$_POST['quantite'];
 				$date=$_POST['date'];
 				$prix=$_POST['prix'];
 				$prixTT=$_POST['prixTT'];

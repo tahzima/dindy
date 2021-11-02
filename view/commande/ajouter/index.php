@@ -60,7 +60,7 @@
                     <div class="form-group col-md-12 text-center">
                         <label>Quantité</label>
                         <div class="col-sm-12">
-                            <input type="number" min="0" class="form-control datetimepicker-input" id="quantite" name="quantite"/>
+                            <input type="text" class="form-control datetimepicker-input" id="quantite" name="quantite"/>
                         </div>
                     </div>
                 </div>

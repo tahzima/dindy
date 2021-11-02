@@ -82,7 +82,7 @@
             <h1 class="text-center">Facture</h1>
         </div>
         <h5 class="text-center">N° : <?=$numFacture?></h5>
-        <h5 class="text-right">Safi,Le : ..............................</h5><br>
+        <h5 class="text-right">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
         <h5 class="text-left">Client : <?=$nomClient?></h5><br>
         <div class="form-row">
             <table>
@@ -90,7 +90,7 @@
                     <tr>
                         <th class="text-center">Date</th>
                         <th class="text-center">Désignation</th>
-                        <th class="text-center">Qté (DHs)</th>
+                        <th class="text-center">Qté (KG)</th>
                         <th class="text-center">P.U (DHs)</th>
                         <th class="text-center">Montant (DHs)</th>
                     </tr>
@@ -119,7 +119,7 @@
                 <tfoot class="text-center">
                     <tr >
                         <td colspan="3">
-                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change()"> <label id="lab" style="display: none;"></label></h5>
+                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change1()"> <label id="lab" style="display: none;"></label></h5>
                         </td>
                         <td colspan="2" >
                             <p><h5>TOTAL H.T : <?=$PTT[0]['Montant']?> DHs</h5></p>
@@ -154,6 +154,16 @@
       <script src="http://localhost/dindy/view/js/js.js"></script>
       <script>
         function change(){
+
+            var inp=document.getElementById("dateTete");
+            var lab=document.getElementById("labDate");
+
+            document.getElementById("labDate").innerText=inp.value;
+            document.getElementById("labDate").style.display="inline-block";
+            document.getElementById("dateTete").style.display="none";
+
+        }
+        function change1(){
 
             var inp=document.getElementById("montantChiffre");
             var lab=document.getElementById("lab");
