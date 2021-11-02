@@ -28,7 +28,7 @@ class Commande
 			if(!empty($_POST['client'])&&!empty($_POST['produit'])&&!empty($_POST['quantite'])&&!empty($_POST['date'])&&!empty($_POST['prix'])&&!empty($_POST['prixTT'])&&!empty($_POST['nFacture'])){
 				$idCommande=$_POST['idCommande'];
 				$idProdit=$_POST['produit'];
-				$qte=$_POST['quantite'];
+				$qte=(float)$_POST['quantite'];
 				$date=$_POST['date'];
 				$prix=$_POST['prix'];
 				$prixTT=$_POST['prixTT'];

@@ -59,7 +59,7 @@
                     <div class="form-group col-md-12 text-center">
                         <label>Quantité</label>
                         <div class="col-sm-12">
-                            <input type="number" class="form-control datetimepicker-input" id="quantite" name="quantite" value="<?=$rowC['qte']?>"/>
+                            <input type="text" class="form-control datetimepicker-input" id="quantite" name="quantite" value="<?=$rowC['qte']?>"/>
                         </div>
                     </div>
                 </div>
