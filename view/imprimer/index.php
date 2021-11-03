@@ -31,7 +31,8 @@
                 </ul>
             </div>
         </div>
-    </nav><br><br><br><br><br><br><br><br>
+    </nav>
+    <br><br><br><br><br><br><br><br>
     <div class="container">
         
         <div class="form-group col-md-12 text-center">

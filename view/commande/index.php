@@ -80,7 +80,7 @@
                 </div>
                 <div class="form-group col-md-3 text-center">
                     <label>Num Facture </label>
-                    <input type="number" class="form-control" name="numFacture" min="1">
+                    <input type="text" class="form-control" name="numFacture">
                 </div>
                 <div class="form-group col-md-12 text-center">
                     <br>

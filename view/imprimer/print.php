@@ -13,41 +13,52 @@
             bottom: 100px; 
             left: 0px; 
             right: 0px; 
-            height: 50px;
+            height: 40px;
             text-align: center; 
         }
         table,th,td{
             border: 2px black solid;
         }
         table{
-            border-radius: 1em;
+            /* border-radius: 1em; */
             overflow: hidden;
             width: 100%;
         }
-        h1{
-            margin-left: 33%;
-            margin-top: 40px;
+        .fac{
+            margin-left: 29%;
+            margin-top: 20px;
+            font-family: Cambria, Georgia, serif;
+            font-size:50px;
         }
         th {
             height: 70px;
         }
         thead{
-            height: 100px;
+            height: 50px;
             background: black;
             color: white;
+        }
+        .tet{
+            border:1px black solid;
         }
         @media print 
         {
             table{
-                margin-top: 30%;
+                /* margin-top: 5%; */
                 width: 100%;
             }
+            .fac{
+            margin-left: 29%;
+            margin-top: 20px;
+            font-family: Cambria, Georgia, serif;
+            font-size:50px;
+        }
             thead{
                     background-color:black ;
                     color-adjust: exact;
                     -webkit-print-color-adjust:exact;
             }
-            footer {position: fixed; bottom: 60px; left: 0px; right: 0px; height: 50px;text-align: center; }
+            footer {position: fixed; bottom: 60px; left: 0px; right: 0px; height: 40px;text-align: center; }
         }
 	</style>
   </head>
@@ -79,11 +90,11 @@
         <br>
         <div class="d-flex justify-content-start">
             <img src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="" style="width: 150px;height: 150px;margin-top: 30px;">
-            <h1 class="text-center">Facture</h1>
+            <p class="text-center fac">Facture</p>
         </div>
-        <h5 class="text-center">N° : <?=$numFacture?></h5>
-        <h5 class="text-right">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
-        <h5 class="text-left">Client : <?=$nomClient?></h5><br>
+        <h5 class="text-center tet">N° : <?=$numFacture?></h5>
+        <h5 class="text-right tet">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
+        <h5 class="text-left tet">Client : <?=$nomClient?></h5><br>
         <div class="form-row">
             <table>
                 <thead>
@@ -119,7 +130,7 @@
                 <tfoot class="text-center">
                     <tr >
                         <td colspan="3">
-                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change1()"> <label id="lab" style="display: none;"></label></h5>
+                            <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change1()"> <label id="lab" style="display: none;"></label> Dirhams</h5>
                         </td>
                         <td colspan="2" >
                             <p><h5>TOTAL H.T : <?=$PTT[0]['Montant']?> DHs</h5></p>
