@@ -26,7 +26,7 @@
         }
         .fac{
             margin-left: 29%;
-            margin-top: 20px;
+            margin-top: -20px;
             font-family: Cambria, Georgia, serif;
             font-size:50px;
         }
@@ -41,24 +41,56 @@
         .tet{
             border:1px black solid;
         }
+        .test2{
+            margin-top:-25px;
+            margin-bottom:-15px;
+            padding-left:6px;
+        }
+        .test1{
+            padding-right:6px;
+        }
+        .im{
+            width: 150px;
+            height: 150px; 
+            padding-bottom:10px;
+            margin-top:-30px;
+        }
         @media print 
         {
             table{
                 /* margin-top: 5%; */
                 width: 100%;
             }
-            .fac{
-            margin-left: 29%;
-            margin-top: 20px;
-            font-family: Cambria, Georgia, serif;
-            font-size:50px;
-        }
+            .tet{
+            border:1px black solid;
+            }
+            .test2{
+                margin-top:-25px;
+                margin-bottom:-15px;
+                padding-left:6px;
+            }
+            .test1{
+                padding-right:6px;
+            }
+                .fac{
+                margin-left: 29%;
+                margin-top: -20px;
+                font-family: Cambria, Georgia, serif;
+                font-size:50px;
+            }
             thead{
                     background-color:black ;
                     color-adjust: exact;
                     -webkit-print-color-adjust:exact;
             }
-            footer {position: fixed; bottom: 60px; left: 0px; right: 0px; height: 40px;text-align: center; }
+            footer {
+                /* position: fixe;  */
+                bottom: 70px; 
+                left: 0px; 
+                right: 0px; 
+                height: 40px;
+                text-align: center;
+            }
         }
 	</style>
   </head>
@@ -89,12 +121,12 @@
     <div class="container mt-4">
         <br>
         <div class="d-flex justify-content-start">
-            <img src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="" style="width: 150px;height: 150px;margin-top: 30px;">
+            <img class="im" src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="">
             <p class="text-center fac">Facture</p>
         </div>
         <h5 class="text-center tet">N° : <?=$numFacture?></h5>
-        <h5 class="text-right tet">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
-        <h5 class="text-left tet">Client : <?=$nomClient?></h5><br>
+        <h5 class="text-right tet test1">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
+        <h5 class="text-left tet test2">Client : <?=$nomClient?></h5><br>
         <div class="form-row">
             <table>
                 <thead>
