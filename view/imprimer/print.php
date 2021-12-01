@@ -10,11 +10,13 @@
       <link rel="stylesheet" href="http://localhost/dindy/view/bootstrap/css/bootstrap.min.css">
     <style>
         footer {
-            bottom: 100px; 
+            /* text-align: center;  */
+            position: fixed; 
+            bottom: 35px; 
             left: 0px; 
             right: 0px; 
             height: 40px;
-            text-align: center; 
+            position: inherit;
         }
         table,th,td{
             border: 2px black solid;
@@ -25,8 +27,8 @@
             width: 100%;
         }
         .fac{
-            margin-left: 29%;
-            margin-top: -20px;
+            margin-left: 20%;
+            margin-top: 123px;
             font-family: Cambria, Georgia, serif;
             font-size:50px;
         }
@@ -55,15 +57,19 @@
             padding-bottom:10px;
             margin-top:-30px;
         }
+        /* .head{
+            display:flex;
+            justify-content:space-between;
+        } */
         @media print 
         {
             table{
                 /* margin-top: 5%; */
                 width: 100%;
             }
-            .tet{
+            /* .tet{
             border:1px black solid;
-            }
+            } */
             .test2{
                 margin-top:-25px;
                 margin-bottom:-15px;
@@ -72,24 +78,24 @@
             .test1{
                 padding-right:6px;
             }
-                .fac{
-                margin-left: 29%;
-                margin-top: -20px;
+            .fac{
+                margin-left: 20%;
+                margin-top: 123px;
                 font-family: Cambria, Georgia, serif;
                 font-size:50px;
             }
             thead{
-                    background-color:black ;
-                    color-adjust: exact;
-                    -webkit-print-color-adjust:exact;
+                background-color:black ;
+                color-adjust: exact;
+                -webkit-print-color-adjust:exact;
             }
             footer {
-                /* position: fixe;  */
-                bottom: 70px; 
+                position: fixed; 
+                bottom: 35px; 
                 left: 0px; 
                 right: 0px; 
                 height: 40px;
-                text-align: center;
+                /* text-align: center; */
             }
         }
 	</style>
@@ -122,11 +128,24 @@
         <br>
         <div class="d-flex justify-content-start">
             <img class="im" src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="">
-            <p class="text-center fac">Facture</p>
+            <p class="text-center fac">Facture N° : <?=$numFacture?></p>
         </div>
-        <h5 class="text-center tet">N° : <?=$numFacture?></h5>
-        <h5 class="text-right tet test1">Safi,Le : <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> <label id="labDate" style="display: none;"></label></h5><br>
-        <h5 class="text-left tet test2">Client : <?=$nomClient?></h5><br>
+        <!-- <h5 class="text-center tet">N° : <?=$numFacture?></h5> -->
+        <h5 class="test1">
+            <div class="head">
+                <div>
+                    Safi,Le : 
+                    <input type="text" name="dateTete" id="dateTete" onfocusout="change()"> 
+                    <label id="labDate" style="display: none;"></label>
+                </div>
+                <p></p>
+                <div>
+                    Client : <?=$nomClient?>
+                </div>
+            </div>
+        </h5>
+        <br>
+        <!-- <h5 class="text-left test2">Client : <?=$nomClient?></h5><br> -->
         <div class="form-row">
             <table>
                 <thead>
@@ -174,15 +193,15 @@
             </table>
         </div><br>
         <footer>
-            <div style="border-top: 5px black solid;">
+            <div style="border-top: 5px black solid;padding-left: 15px;">
                 <p >
-                    <h6>AVA Sarl Au Capital de 60,000,00 DH, Siége Social : 18 Bloc 3 Quartier Riyad - SAFI</h6>
+                    <h6>AVA Sarl, Siége Social : 18 Bloc 3 Quartier Riyad - SAFI / Tél : 06 02 39 91 31 / Email : ava.cdv@gmail.com</h6>
                 </p>
+                <!-- <p>
+                    <h6> - </h6>
+                </p> -->
                 <p>
-                    <h6>Tél : 06 02 39 91 31 - Email : ava.cdv@gmail.com</h6>
-                </p>
-                <p>
-                    <h6>RC : 11181 - IF : 48520076 - ICE : 002719807000031</h6>
+                    <h6>RC : 11181 , IF : 48520076 , Patente : 50002726 , ICE : 002719807000031</h6>
                 </p>
             </div>
         </footer>
