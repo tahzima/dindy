@@ -127,7 +127,7 @@
     <div class="container mt-4">
         <br>
         <div class="d-flex justify-content-start">
-            <img class="im" src="http://localhost/dindy/view/logo/logoPNG.jpg" alt="logo" srcset="">
+            <img class="im" src="http://localhost/dindy/view/logo/2.png" alt="logo" srcset="">
             <p class="text-center fac">Facture N° : <?=$numFacture?></p>
         </div>
         <!-- <h5 class="text-center tet">N° : <?=$numFacture?></h5> -->
@@ -173,7 +173,7 @@
                                 <label><?=$row['P.U']?></label>
                             </td>
                             <td>
-                                <label><?=$row['Prix TT']?></label>
+                                <label><?=round($row['Prix TT'],2)?></label>
                             </td>
                         </tr>
                     </tbody>
