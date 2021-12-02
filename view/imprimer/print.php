@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="http://localhost/dindy/view/bootstrap/css/bootstrap.min.css">
     <style>
         footer {
-            /* text-align: center;  */
+            text-align: center; 
             position: fixed; 
             bottom: 35px; 
             left: 0px; 
@@ -27,8 +27,8 @@
             width: 100%;
         }
         .fac{
-            margin-left: 20%;
-            margin-top: 123px;
+            margin-left: 10%;
+            margin-top: 140px;
             font-family: Cambria, Georgia, serif;
             font-size:50px;
         }
@@ -61,6 +61,12 @@
             display:flex;
             justify-content:space-between;
         } */
+        .wassim{
+            display: flex;
+            flex-direction: column;
+            font-family: math;
+            font-size: 18px;
+        }
         @media print 
         {
             table{
@@ -79,8 +85,8 @@
                 padding-right:6px;
             }
             .fac{
-                margin-left: 20%;
-                margin-top: 123px;
+                margin-left: 10%;
+                margin-top: 140px;
                 font-family: Cambria, Georgia, serif;
                 font-size:50px;
             }
@@ -95,7 +101,7 @@
                 left: 0px; 
                 right: 0px; 
                 height: 40px;
-                /* text-align: center; */
+                text-align: center;
             }
         }
 	</style>
@@ -127,7 +133,10 @@
     <div class="container mt-4">
         <br>
         <div class="d-flex justify-content-start">
-            <img class="im" src="http://localhost/dindy/view/logo/2.png" alt="logo" srcset="">
+            <div class="wassim">
+                <img class="im" src="http://localhost/dindy/view/logo/2.png" alt="logo" srcset="">
+                <div style="margin-top:-13px;">Société de Commercialisation <br>& Distribution de Volaille</div>
+            </div>
             <p class="text-center fac">Facture N° : <?=$numFacture?></p>
         </div>
         <!-- <h5 class="text-center tet">N° : <?=$numFacture?></h5> -->
@@ -195,13 +204,13 @@
         <footer>
             <div style="border-top: 5px black solid;padding-left: 15px;">
                 <p >
-                    <h6>AVA Sarl, Siége Social : 18 Bloc 3 Quartier Riyad - SAFI / Tél : 06 02 39 91 31 / Email : ava.cdv@gmail.com</h6>
+                    <h6>AVA Sarl, Siége Social : 18 Bloc 3 Quartier Riyad - SAFI / Tél : 06 02 39 91 31 / Email : ava.cdv@gmail.com / RC : 11181 / IF : 48520076</h6>
                 </p>
                 <!-- <p>
                     <h6> - </h6>
                 </p> -->
                 <p>
-                    <h6>RC : 11181 , IF : 48520076 , Patente : 50002726 , ICE : 002719807000031</h6>
+                    <h6>Patente : 50002726 , ICE : 002719807000031</h6>
                 </p>
             </div>
         </footer>
