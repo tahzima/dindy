@@ -184,9 +184,9 @@
                             <h5>Arrêtée la présente facture à la somme de : <input type="text" name="montantChiffre" id="montantChiffre" onfocusout="change1()"> <label id="lab" style="display: none;"></label> Dirhams</h5>
                         </td>
                         <td colspan="2" >
-                            <p><h5>TOTAL H.T : <?=$PTT[0]['Montant']?> DHs</h5></p>
+                            <p><h5>TOTAL H.T : <?=round($PTT[0]['Montant'],2)?> DHs</h5></p>
                             <p style="border-bottom:1px black solid;"><h5>TOTAL T.V.A : 0 </h5></p>
-                            <p style="border-bottom:1px black solid;"><h5>Net A PAYER : <?=$PTT[0]['Montant']?> DHs</h5></p>
+                            <p style="border-bottom:1px black solid;"><h5>Net A PAYER : <?=round($PTT[0]['Montant'],2)?> DHs</h5></p>
                         </td>
                     </tr>
                 </tfoot>
