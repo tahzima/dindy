@@ -56,6 +56,7 @@
             height: 150px; 
             padding-bottom:10px;
             margin-top:-30px;
+            margin-left: 44px;
         }
         /* .head{
             display:flex;
@@ -65,7 +66,7 @@
             display: flex;
             flex-direction: column;
             font-family: math;
-            font-size: 18px;
+            /* font-size: 18px; */
         }
         @media print 
         {
@@ -135,9 +136,9 @@
         <div class="d-flex justify-content-start">
             <div class="wassim">
                 <img class="im" src="http://localhost/dindy/view/logo/2.png" alt="logo" srcset="">
-                <div style="margin-top:-13px;">Société de Commercialisation <br>& Distribution de Volaille</div>
+                <div style="margin-top:-13px;margin-left:-45px;"><h4>Société de Commercialisation <br>&ensp; & Distribution de Volaille</h4></div>
             </div>
-            <p class="text-center fac">Facture N° : <?=$numFacture?></p>
+            <p class="text-center fac">Facture N° : <?=$numFacture?></p> 
         </div>
         <!-- <h5 class="text-center tet">N° : <?=$numFacture?></h5> -->
         <h5 class="test1">
