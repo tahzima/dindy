@@ -8,8 +8,14 @@ class imprimerModel{
         $query=Database::connect()->query($sql);
         $result= $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;
-    } 
-
+    }
+    //fonction retour la somme de commande par client
+    public function somme($id){
+        $sql="select SUM(commande.prixTT)as 'somme' from commande WHERE commande.idClient=$id";
+        $query=Database::connect()->query($sql);
+        $result= $query->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
     //function read
     public function facture($month,$year,$id){
         $sql="SELECT client.nom as 'Client',commande.date as 'date',produit.nom as 'Produit',commande.prix as 'P.U',commande.qte as 'Qte',commande.prixTT as 'Prix TT' from client,commande,produit WHERE commande.idClient=client.idClient AND commande.idProduit=produit.idProduit AND month(commande.date)=$month AND year(commande.date)=$year AND commande.idClient=$id ORDER BY commande.date ASC";

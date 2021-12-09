@@ -23,6 +23,13 @@ class Imprimer
 				$facture=$imp->facture($month,$year,$idClient);
 				$nomClient=$facture[0]['Client'];
 				$date= date("d-m-Y");
+				// $somme=$imp->somme($idClient);
+				// foreach($somme as $se){
+				// echo $se['somme'];
+				// }
+				// foreach($facture as $se){
+				// 	echo $se['Prix TT']." ";
+				// }
 				require __DIR__."/../view/imprimer/print.php";
 			}
 		}

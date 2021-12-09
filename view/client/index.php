@@ -101,5 +101,10 @@
       </div>
     </div>
     <script src="http://localhost/dindy/view/js/js.js"></script>
+    <script>
+      function edit(){
+        
+      }
+    </script>
   </body>
 </html>

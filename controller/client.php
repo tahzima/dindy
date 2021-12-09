@@ -35,7 +35,6 @@ class Client
 	}
 	public function edit()
 	{
-		
 		$client=new ClientModel();
 		if(isset($_POST["index"])){
 			$i=$_POST["index"];
