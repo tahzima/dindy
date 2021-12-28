@@ -101,7 +101,7 @@
                 bottom: 35px; 
                 left: 0px; 
                 right: 0px; 
-                height: 40px;
+                height: 20px;
                 text-align: center;
             }
         }
@@ -204,15 +204,12 @@
         </div>
         <footer>
             <div style="border-top: 5px black solid;padding-left: 15px;">
-                <p >
+                <!-- <p > -->
                     <h6>AVA Sarl, Siége Social : 18 Bloc 3 Quartier Riyad - SAFI / Tél : 06 02 39 91 31 / Email : ava.cdv@gmail.com / RC : 11181 / IF : 48520076</h6>
-                </p>
-                <!-- <p>
-                    <h6> - </h6>
-                </p> -->
-                <p>
+                <!-- </p> -->
+                <!-- <p> -->
                     <h6>Patente : 50002726 , ICE : 002719807000031</h6>
-                </p>
+                <!-- </p> -->
             </div>
         </footer>
     </div>
